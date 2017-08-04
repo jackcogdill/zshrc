@@ -1,18 +1,19 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+####### Start oh-my-zsh #######
+###############################
 
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 source ~/.fonts/lib/*.sh # Load all the icon vars from nerd fonts
 
-# Set name of the theme to load. Optionally, if you set this to "random"
-# it'll load a random theme each time that oh-my-zsh is loaded.
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+# Set name of the theme to load.
+# Look in ~/.oh-my-zsh/themes/
+# Optionally, if you set this to "random", it'll load a random theme each
+# time that oh-my-zsh is loaded.
 #POWERLEVEL9K_MODE="awesome-patched"
 POWERLEVEL9K_MODE="nerdfont-complete"
 ZSH_THEME="powerlevel9k/powerlevel9k"
 
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(battery background_jobs context dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status time)
 #POWERLEVEL9K_LEFT_SEGMENT_SEPARATOR="$i_ple_pixelated_squares_big "
 POWERLEVEL9K_RIGHT_SEGMENT_SEPARATOR=""
@@ -34,12 +35,17 @@ POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="" # "\u250f\u2501"
 POWERLEVEL9K_MULTILINE_SECOND_PROMPT_PREFIX="$ " # "\u2517$ " #"\u2517\u276f "
 POWERLEVEL9K_PROMPT_ADD_NEWLINE="true"
 
-#POWERLEVEL9K_BATTERY_CHARGING="yellow"
-#POWERLEVEL9K_BATTERY_CHARGED="green"
-#POWERLEVEL9K_BATTERY_DISCONNECTED="$DEFAULT_COLOR"
-#POWERLEVEL9K_BATTERY_LOW_THRESHOLD="20"
-#POWERLEVEL9K_BATTERY_LOW_COLOR="red"
-#POWERLEVEL9K_BATTERY_VERBOSE="false"
+POWERLEVEL9K_BATTERY_CHARGING="yellow"
+POWERLEVEL9K_BATTERY_CHARGED="green"
+POWERLEVEL9K_BATTERY_DISCONNECTED="$DEFAULT_COLOR"
+POWERLEVEL9K_BATTERY_LOW_THRESHOLD="20"
+POWERLEVEL9K_BATTERY_LOW_COLOR="red"
+POWERLEVEL9K_BATTERY_VERBOSE="false"
+# Background
+POWERLEVEL9K_BATTERY_CHARGING_BACKGROUND="025"
+POWERLEVEL9K_BATTERY_CHARGED_BACKGROUND="025"
+POWERLEVEL9K_BATTERY_DISCONNECTED_BACKGROUND="025"
+POWERLEVEL9K_BATTERY_LOW_BACKGROUND="025"
 
 DEFAULT_USER="$USER"
 
@@ -87,22 +93,19 @@ DEFAULT_USER="$USER"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git sublime sudo macports history python extract yarn)
 
-source $ZSH/oh-my-zsh.sh
-source ~/.profile
-
 # User configuration
 
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-export MANPATH="/usr/local/man:$MANPATH"
-export MANPATH=/opt/local/share/man:$MANPATH
+export PATH="/opt/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/TeX/texbin"
+export PATH="~/Library/Python/3.5/bin:$PATH"
+
+source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
 # Colors for ls
 export CLICOLOR=1
-export LSCOLORS=GxFxCxDxBxegedabagaced
-# export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
+export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -115,7 +118,7 @@ export LSCOLORS=GxFxCxDxBxegedabagaced
 # export ARCHFLAGS="-arch x86_64"
 
 # ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
+# export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -126,10 +129,10 @@ export LSCOLORS=GxFxCxDxBxegedabagaced
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias nbm="mvm 4; pushd ~/Code/Logos-Desktop-Dev/DigitalLibrary/src/macintosh/; nant build-managed; popd; mvm 5"
-alias cl="clone-leeroy"alias zshrc="vim ~/.zshrc && source ~/.zshrc"
-
 alias ip='curl icanhazip.com'
+alias gh='cd ~/Programming/Github\ Repos'
+alias gdbgui="sudo echo; python -c \"__import__('time').sleep(1.5); __import__('webbrowser').open('http://127.0.0.1:1337')\" &; sudo ~/Library/Python/3.5/bin/gdbgui -g /opt/local/bin/ggdb -p1337 -n"
+alias zshrc="vim ~/.zshrc && source ~/.zshrc"
 alias spu="sudo port selfupdate"
 
 cutleaves() {
@@ -145,12 +148,15 @@ cutleaves() {
 
 search() {
     s="$1"
-    for f in `mdfind -onlyin . "$s"`; do
+    mdfind -onlyin . "$s" | while IFS= read -r f; do
         cat "$f" | grep -E "$s" && (
             print -P "%F{cyan}"
-            echo ".${f#`pwd`}" 
+            echo ".${f#`pwd`}"
             print -P "%f"
         )
     done
 }
+
+####### End oh-my-zsh #######
+#############################
 

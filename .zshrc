@@ -132,6 +132,9 @@ export VISUAL="$editor"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias nbm="mvm 4; pushd ~/Code/Logos-Desktop-Dev/DigitalLibrary/src/macintosh/; nant build-managed; popd; mvm 5"
+alias cl="clone-leeroy"
+
 alias ip='curl icanhazip.com'
 alias gh='cd ~/Programming/Github\ Repos'
 alias gdbgui="sudo echo; python -c \"__import__('time').sleep(1.5); __import__('webbrowser').open('http://127.0.0.1:1337')\" &; sudo ~/Library/Python/3.5/bin/gdbgui -g /opt/local/bin/ggdb -p1337 -n"

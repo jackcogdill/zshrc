@@ -20,7 +20,7 @@ POWERLEVEL9K_RIGHT_SEGMENT_SEPARATOR=""
 POWERLEVEL9K_RIGHT_SUBSEGMENT_SEPARATOR="" # " $i_pl_right_soft_divider"
 
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=4
-POWERLEVEL9K_DIR_PATH_SEPARATOR=" $i_pl_left_soft_divider "
+#POWERLEVEL9K_DIR_PATH_SEPARATOR=" $i_pl_left_soft_divider "
 POWERLEVEL9K_VCS_GIT_GITHUB_ICON="$i_oct_octoface "
 POWERLEVEL9K_STATUS_VERBOSE="true"
 POWERLEVEL9K_STATUS_OK_BACKGROUND="clear"
@@ -114,6 +114,10 @@ export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 #   export EDITOR='mvim'
 # fi
 
+editor=`which nvim`
+export EDITOR="$editor"
+export VISUAL="$editor"
+
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -132,7 +136,9 @@ export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 alias ip='curl icanhazip.com'
 alias gh='cd ~/Programming/Github\ Repos'
 alias gdbgui="sudo echo; python -c \"__import__('time').sleep(1.5); __import__('webbrowser').open('http://127.0.0.1:1337')\" &; sudo ~/Library/Python/3.5/bin/gdbgui -g /opt/local/bin/ggdb -p1337 -n"
-alias zshrc="vim ~/.zshrc && source ~/.zshrc"
+alias zshrc="$EDITOR ~/.zshrc && source ~/.zshrc"
+alias vimrc="$EDITOR ~/.vimrc"
+alias nvimrc="$EDITOR ~/.config/nvim/init.vim"
 alias spu="sudo port selfupdate"
 
 cutleaves() {

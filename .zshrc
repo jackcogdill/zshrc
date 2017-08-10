@@ -162,6 +162,12 @@ search() {
     done
 }
 
+# List files changed between a commit range
+glc() {
+    commit_range="$1"
+    git log --name-only --pretty=oneline --full-index "$commit_range" | grep -vE '^[0-9a-f]{40} ' | sort | uniq
+}
+
 ####### End oh-my-zsh #######
 #############################
 

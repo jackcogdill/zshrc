@@ -98,6 +98,7 @@ export PATH="/opt/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X1
 export PATH="~/Library/Python/3.5/bin:$PATH"
 
 source $ZSH/oh-my-zsh.sh
+source ~/.profile
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -132,7 +133,7 @@ export VISUAL="$editor"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias nbm="mvm 4; pushd ~/Code/Logos-Desktop-Dev/DigitalLibrary/src/macintosh/; nant build-managed; popd; mvm 5"
+alias nbm="pushd ~/Code/Logos-Desktop-Dev/DigitalLibrary/src/macintosh/; nant build-managed; popd"
 alias cl="clone-leeroy"
 
 alias ip='curl icanhazip.com'

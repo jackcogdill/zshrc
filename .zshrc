@@ -140,6 +140,7 @@ alias zshrc="$EDITOR ~/.zshrc && source ~/.zshrc"
 alias vimrc="$EDITOR ~/.vimrc"
 alias nvimrc="$EDITOR ~/.config/nvim/init.vim"
 alias spu="sudo port selfupdate"
+alias mfind="mdfind -onlyin ."
 
 cutleaves() {
     sudo port uninstall inactive

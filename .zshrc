@@ -141,6 +141,10 @@ alias vimrc="$EDITOR ~/.vimrc"
 alias nvimrc="$EDITOR ~/.config/nvim/init.vim"
 alias spu="sudo port selfupdate"
 alias mfind="mdfind -onlyin ."
+# Port maintenance
+alias pm="spu && cutleaves && sudo port upgrade outdated"
+# Spellcheck for .tex files
+alias spellcheck="aspell -c -t"
 
 cutleaves() {
     sudo port uninstall inactive

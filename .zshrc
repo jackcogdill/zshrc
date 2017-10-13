@@ -145,6 +145,7 @@ alias mfind="mdfind -onlyin ."
 alias pm="spu && cutleaves && sudo port upgrade outdated"
 # Spellcheck for .tex files
 alias spellcheck="aspell -c -t"
+alias hw="nvim ~/Education/Important\ Files/homework.md"
 
 cutleaves() {
     sudo port uninstall inactive

@@ -148,7 +148,11 @@ alias spellcheck="aspell -c -t"
 alias hw="nvim ~/Education/Important\ Files/homework.md"
 
 weather() {
-    curl "wttr.in/\~$1"
+    if [[ $# -eq 0 ]]; then
+        curl "wttr.in/~Blacksburg"
+    else
+        curl "wttr.in/\~$1"
+    fi
 }
 
 cutleaves() {

@@ -147,6 +147,10 @@ alias pm="spu && cutleaves && sudo port upgrade outdated"
 alias spellcheck="aspell -c -t"
 alias hw="nvim ~/Education/Important\ Files/homework.md"
 
+weather() {
+    curl "wttr.in/\~$1"
+}
+
 cutleaves() {
     sudo port uninstall inactive
     sudo port clean --all installed

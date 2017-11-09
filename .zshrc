@@ -146,6 +146,7 @@ alias pm="spu && cutleaves && sudo port upgrade outdated"
 # Spellcheck for .tex files
 alias spellcheck="aspell -c -t"
 alias hw="nvim ~/Education/Important\ Files/homework.md"
+alias rl="ssh -t jackcog@rlogin.cs.vt.edu zsh"
 
 weather() {
     if [[ $# -eq 0 ]]; then

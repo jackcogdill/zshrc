@@ -91,7 +91,18 @@ POWERLEVEL9K_PROMPT_ADD_NEWLINE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git sublime sudo macports history python extract yarn zsh-autosuggestions)
+plugins=(
+    git
+    sublime
+    sudo
+    macports
+    history
+    python
+    extract
+    yarn
+    zsh-autosuggestions
+)
+bindkey '^Z' autosuggest-accept # Accept the auto-suggestion with Ctrl-Z
 
 # User configuration
 

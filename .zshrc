@@ -99,7 +99,6 @@ plugins=(
     history
     python
     extract
-    yarn
     zsh-autosuggestions
 )
 bindkey '^Z' autosuggest-accept # Accept the auto-suggestion with Ctrl-Z

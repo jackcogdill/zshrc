@@ -101,7 +101,7 @@ plugins=(
     extract
     zsh-autosuggestions
 )
-bindkey '^Z' autosuggest-accept # Accept the auto-suggestion with Ctrl-Z
+bindkey '^Z' autosuggest-execute # Accept and execute the auto-suggestion with Ctrl-Z
 
 # User configuration
 

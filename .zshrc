@@ -31,8 +31,13 @@ POWERLEVEL9K_TIME_FOREGROUND="white"
 
 POWERLEVEL9K_PROMPT_ON_NEWLINE="true"
 POWERLEVEL9K_RPROMPT_ON_NEWLINE="true"
-POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="" # "\u250f\u2501"
-POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%{${fg[blue]}%}> %{${fg[cyan]}%}%%%{${reset_color}%} " # "\u2517$ " #"\u2517\u276f "
+POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=""
+# ============================================================
+# Copy desired prompt with color at the bottom of the file
+# ============================================================
+POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%{${fg[blue]}%}> %{${fg[cyan]}%}%%%{${reset_color}%} "
+# Bold Boneless prompt:
+#POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%{${fg_bold[red]}%}🅱 %{${reset_color}%}"
 POWERLEVEL9K_PROMPT_ADD_NEWLINE="true"
 
 #POWERLEVEL9K_BATTERY_CHARGING="yellow"
@@ -196,4 +201,5 @@ glc() {
 
 ####### End oh-my-zsh #######
 #############################
+POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%{${fg[blue]}%}> %{${fg[cyan]}%}%%%{${reset_color}%} "
 

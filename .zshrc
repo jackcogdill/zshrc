@@ -156,7 +156,7 @@ alias vimrc="$EDITOR ~/.vimrc"
 alias nvimrc="$EDITOR ~/.config/nvim/init.vim"
 alias mfind="mdfind -onlyin ."
 # Port maintenance
-alias pm="spu && cutleaves && sudo port upgrade outdated"
+alias pm="psu && cutleaves && sudo port upgrade outdated"
 # Spellcheck for .tex files
 alias spellcheck="aspell -c -t"
 alias hw="nvim ~/Education/Important\ Files/homework.md"

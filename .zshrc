@@ -154,7 +154,6 @@ alias gdbgui="sudo echo; python -c \"__import__('time').sleep(1.5); __import__('
 alias zshrc="$EDITOR ~/.zshrc && source ~/.zshrc"
 alias vimrc="$EDITOR ~/.vimrc"
 alias nvimrc="$EDITOR ~/.config/nvim/init.vim"
-alias spu="sudo port selfupdate"
 alias mfind="mdfind -onlyin ."
 # Port maintenance
 alias pm="spu && cutleaves && sudo port upgrade outdated"

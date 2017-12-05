@@ -162,6 +162,7 @@ alias spellcheck="aspell -c -t"
 alias hw="nvim ~/Education/Important\ Files/homework.md"
 alias rl="ssh -t jackcog@rlogin.cs.vt.edu zsh"
 alias repl="java -jar /opt/local/share/java/javarepl*.jar"
+alias gpf="git push -f"
 
 weather() {
     if [[ $# -eq 0 ]]; then

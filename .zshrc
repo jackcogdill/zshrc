@@ -161,6 +161,8 @@ alias pm="psu && cutleaves && sudo port upgrade outdated"
 alias spellcheck="aspell -c -t"
 alias hw="nvim ~/Education/Important\ Files/homework.md"
 alias rl="ssh -t jackcog@rlogin.cs.vt.edu zsh"
+alias rlb="ssh jackcog@rlogin.cs.vt.edu" # ssh to rlogin in bash (instead of zsh)
+alias portal="ssh jackcog@portal.cs.vt.edu"
 alias repl="java -jar /opt/local/share/java/javarepl*.jar"
 alias gpf="git push -f"
 

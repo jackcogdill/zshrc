@@ -187,10 +187,10 @@ cutleaves() {
 
 search() {
     s="$1"
-    mdfind -onlyin . "$s" | while IFS= read -r f; do
+    find . | while IFS= read -r f; do
         cat "$f" | grep -E "$s" && (
             print -P "%F{cyan}"
-            echo ".${f#`pwd`}"
+            echo "${f#`pwd`}"
             print -P "%f"
         )
     done

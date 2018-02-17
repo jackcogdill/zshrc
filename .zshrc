@@ -13,32 +13,39 @@ source ~/.fonts/lib/*.sh # Load all the icon vars from nerd fonts
 POWERLEVEL9K_MODE="nerdfont-complete"
 ZSH_THEME="powerlevel9k/powerlevel9k"
 
+# Prompt
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context background_jobs dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status time)
-#POWERLEVEL9K_LEFT_SEGMENT_SEPARATOR="$i_ple_pixelated_squares_big "
+POWERLEVEL9K_PROMPT_ON_NEWLINE="true"
+POWERLEVEL9K_PROMPT_ADD_NEWLINE="true"
+POWERLEVEL9K_RPROMPT_ON_NEWLINE="true"
 POWERLEVEL9K_RIGHT_SEGMENT_SEPARATOR=""
 POWERLEVEL9K_RIGHT_SUBSEGMENT_SEPARATOR="" # " $i_pl_right_soft_divider"
+#POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%{${fg[blue]}%}> %{${fg[cyan]}%}$%{${reset_color}%} "
+#POWERLEVEL9K_LEFT_SEGMENT_SEPARATOR="$i_ple_pixelated_squares_big "
+#POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=""
 
-POWERLEVEL9K_SHORTEN_DIR_LENGTH=4
-POWERLEVEL9K_DIR_PATH_SEPARATOR=" $i_pl_left_soft_divider "
+# Context
+POWERLEVEL9K_ALWAYS_SHOW_CONTEXT="true"
+
+# Directory
+#POWERLEVEL9K_DIR_PATH_SEPARATOR=" $i_pl_left_soft_divider "
+POWERLEVEL9K_SHORTEN_DELIMITER=""
+POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
+POWERLEVEL9K_SHORTEN_DIR_LENGTH="2"
+
+# Git
 POWERLEVEL9K_VCS_GIT_GITHUB_ICON="$i_oct_octoface "
+
+# Status
 POWERLEVEL9K_STATUS_VERBOSE="true"
 POWERLEVEL9K_STATUS_OK_BACKGROUND="clear"
 POWERLEVEL9K_STATUS_ERROR_BACKGROUND="clear"
 POWERLEVEL9K_STATUS_ERROR_FOREGROUND="red"
+
+# Time
 POWERLEVEL9K_TIME_BACKGROUND="clear"
 POWERLEVEL9K_TIME_FOREGROUND="white"
-
-POWERLEVEL9K_PROMPT_ON_NEWLINE="true"
-POWERLEVEL9K_RPROMPT_ON_NEWLINE="true"
-POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=""
-# ============================================================
-# Copy desired prompt with color at the bottom of the file
-# ============================================================
-POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%{${fg[blue]}%}> %{${fg[cyan]}%}$%{${reset_color}%} "
-# Bold Boneless prompt:
-#POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%{${fg_bold[red]}%}🅱 %{${reset_color}%}"
-POWERLEVEL9K_PROMPT_ADD_NEWLINE="true"
 
 #POWERLEVEL9K_BATTERY_CHARGING="yellow"
 #POWERLEVEL9K_BATTERY_CHARGED="green"
@@ -51,8 +58,6 @@ POWERLEVEL9K_PROMPT_ADD_NEWLINE="true"
 #POWERLEVEL9K_BATTERY_CHARGED_BACKGROUND="025"
 #POWERLEVEL9K_BATTERY_DISCONNECTED_BACKGROUND="025"
 #POWERLEVEL9K_BATTERY_LOW_BACKGROUND="025"
-
-DEFAULT_USER="$USER"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -98,13 +103,13 @@ DEFAULT_USER="$USER"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
     git
-    sublime
     sudo
     macports
     history
     python
     extract
     zsh-autosuggestions
+    zsh-syntax-highlighting
 )
 bindkey '^Z' autosuggest-execute # Accept and execute the auto-suggestion with Ctrl-Z
 
@@ -204,5 +209,3 @@ glc() {
 
 ####### End oh-my-zsh #######
 #############################
-POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%{${fg[blue]}%}> %{${fg[cyan]}%}$%{${reset_color}%} "
-

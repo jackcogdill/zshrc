@@ -150,19 +150,19 @@ export VISUAL="$editor"
 
 alias ip='curl icanhazip.com'
 alias gh='cd ~/Programming/Github\ Repos'
-alias gdbgui="sudo echo; python -c \"__import__('time').sleep(1.5); __import__('webbrowser').open('http://127.0.0.1:1337')\" &; sudo ~/Library/Python/3.5/bin/gdbgui -g /opt/local/bin/ggdb -p1337 -n"
 alias zshrc="$EDITOR ~/.zshrc && source ~/.zshrc"
 alias vimrc="$EDITOR ~/.vimrc"
 alias nvimrc="$EDITOR ~/.config/nvim/init.vim"
 alias mfind="mdfind -onlyin ."
 # Port maintenance
 alias pm="psu && cutleaves && sudo port upgrade outdated"
-# Spellcheck for .tex files
-alias spellcheck="aspell -c -t"
-alias hw="nvim ~/Education/Important\ Files/homework.md"
+# SSH aliasas
 alias rl="ssh -t jackcog@rlogin.cs.vt.edu zsh"
 alias rlb="ssh jackcog@rlogin.cs.vt.edu" # ssh to rlogin in bash (instead of zsh)
 alias portal="ssh jackcog@portal.cs.vt.edu"
+alias ourlogin="ssh kiyoshi@ourlogin.space"
+
+alias hw="nvim ~/Education/Important\ Files/homework.md"
 alias repl="java -jar /opt/local/share/java/javarepl*.jar"
 alias gpf="git push -f"
 

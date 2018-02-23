@@ -32,7 +32,7 @@ POWERLEVEL9K_ALWAYS_SHOW_CONTEXT="true"
 #POWERLEVEL9K_DIR_PATH_SEPARATOR=" $i_pl_left_soft_divider "
 POWERLEVEL9K_SHORTEN_DELIMITER=""
 POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
-POWERLEVEL9K_SHORTEN_DIR_LENGTH="2"
+POWERLEVEL9K_SHORTEN_DIR_LENGTH="1"
 
 # Git
 POWERLEVEL9K_VCS_GIT_GITHUB_ICON="$i_oct_octoface "
@@ -160,7 +160,7 @@ alias vimrc="$EDITOR ~/.vimrc"
 alias nvimrc="$EDITOR ~/.config/nvim/init.vim"
 alias mfind="mdfind -onlyin ."
 # Port maintenance
-alias pm="psu && cutleaves && sudo port upgrade outdated"
+alias pm="psu && cutleaves && puo"
 # SSH aliasas
 alias rl="ssh -t jackcog@rlogin.cs.vt.edu zsh"
 alias rlb="ssh jackcog@rlogin.cs.vt.edu" # ssh to rlogin in bash (instead of zsh)
